@@ -1,0 +1,185 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* grid-template-rows: 0.4fr 1fr 1fr 2fr 0.5fr; */
+
+  grid-template-areas:
+    "header header header header header"
+    "main main main aside aside"
+    "footer footer footer footer footer";
+
+  grid-gap: 0.2rem;
+  font-family: "inter", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  color: #004d40;
+  text-align: center;
+}
+
+figure {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  border-style: solid;
+  border-width: 5px;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  justify-content: space-evenly;
+  margin: 15px;
+}
+
+#logo {
+  display: flex;
+  max-width: 60px;
+  max-height: 30px;
+  justify-content: flex-start;
+  margin: 15px;
+}
+
+#logo:hover {
+  transform: scale(1.2);
+}
+
+nav ul a {
+  color: rgb(0, 94, 128);
+  border-bottom: 3px solid rgba(255, 0, 0, 0.518);
+}
+
+nav ul li:hover {
+  transform: scale(1.2);
+}
+
+header {
+  grid-area: header;
+}
+
+header h1 {
+  /* Bidlet jeg har tatt er fra Binärcode fra google */
+  background-image: url("../pictures/kode.jpg");
+  min-height: 350px;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+  line-height: 400px;
+  font-size: 40px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+}
+
+main {
+  grid-area: main;
+}
+
+aside {
+  grid-area: aside;
+  width: 390px;
+  border: 10px solid #ccc;
+  margin: 10px;
+}
+
+article {
+  border: 10px solid #ccc;
+  margin: 10px;
+  text-align: center;
+}
+
+article:hover {
+  box-shadow: 7px 10px 15px #adadad;
+}
+
+article a:hover {
+  border-top: 3px solid rgba(255, 0, 0, 0.518);
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+section p {
+  max-width: 250px;
+}
+
+section figure {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+#seopicture {
+  max-width: 170px;
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-style: solid;
+  border-width: 100px 5px;
+}
+
+.contactme {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 10px solid #ccc;
+  margin: 10px;
+  text-align: center;
+}
+
+button {
+  width: 150px;
+  height: 25px;
+  margin: 5px;
+  background-color: #5c9e49;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0px 0px 2px 2px rgb(68, 205, 23);
+}
+
+button:hover {
+  color: #3a7999;
+  background: rgba(0, 0, 0, 0);
+}
+
+#rel-articles {
+  display: flex;
+  flex-direction: column;
+}
+
+#rel-articles ul li:hover {
+  transform: scale(1.1);
+}
+
+section ul a {
+  border-bottom: 3px solid rgba(17, 0, 255, 0.518);
+}
+
+/* @media (min-width:320px)  { smartphones, iPhone, portrait 480x320 phones } */
+/* @media (min-width:481px)  { portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. } */
+/* @media (min-width:641px)  { portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones } */
+/* @media (min-width:961px)  { tablet, landscape iPad, lo-res laptops ands desktops } */
+/* @media (min-width:1025px) { big landscape tablets, laptops, and desktops } */
+/* @media (min-width:1281px) { hi-res laptops and desktops }  */
